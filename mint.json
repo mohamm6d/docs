@@ -1,6 +1,6 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "$schema": "https://xeepp.com/schema.json",
+  "name": "Xeepp Starter Kit",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:hi@xeepp.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://dashboard.xeepp.com"
   },
   "tabs": [
     {
@@ -35,17 +35,17 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://docs.xeepp.com"
     },
     {
       "name": "Community",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "https://www.xeepp.com/community"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://www.xeepp.com/blog"
     }
   ],
   "navigation": [
@@ -54,7 +54,8 @@
       "pages": [
         "introduction",
         "quickstart",
-        "development"
+        "Local-setup",
+        "deploy-production"
       ]
     },
     {
@@ -69,12 +70,6 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/get",
@@ -84,8 +79,10 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "facebook": "https://facebook.com/xeepp1",
+    "instagram": "https://instagram.com/xeepp1",
+    "x": "https://x.com/xeepp1",
+    "github": "https://github.com/xeepp",
+    "linkedin": "https://www.linkedin.com/company/xeepp"
   }
 }
