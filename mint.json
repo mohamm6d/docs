@@ -2,8 +2,8 @@
   "$schema": "https://xeepp.com/schema.json",
   "name": "Xeepp Starter Kit",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo.png",
+    "light": "/logo/logo.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -27,8 +27,8 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Support",
+      "url": "support"
     }
   ],
   "anchors": [
@@ -36,11 +36,6 @@
       "name": "Documentation",
       "icon": "book-open-cover",
       "url": "https://docs.xeepp.com"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://www.xeepp.com/community"
     },
     {
       "name": "Blog",
@@ -59,22 +54,16 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Features",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "features/routing",
+        "features/payments"
       ]
     },
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "support/introduction"
       ]
     }
   ],

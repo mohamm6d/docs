@@ -1,0 +1,16 @@
+---
+title: 'Global Settings'
+description: 'xeepp uses a laravel package to load global settings'
+icon: 'gear'
+---
+
+You can simply load any settings that you can set in admin via following codes
+
+## Admin
+Simply head to `admin` and select `Laravel Setting` from the side bar. There you can set settings for your application
+
+## Load settings
+By calling this helper, settings are loaded into your application. Some of these settings are created on setting up the application like `ui` settings.
+```
+setting('group.name')
+```
