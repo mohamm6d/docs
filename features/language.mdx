@@ -1,0 +1,28 @@
+---
+title: 'Language'
+description: 'Allow users to select their own language'
+icon: 'gear'
+---
+
+### Adding New Languages
+To support multiple languages in your Laravel application, you can add new language files to the langs folder. Each language should have its own subfolder containing the necessary translation files. For example, to add `Spanish` translations, you would create a es folder inside the langs directory and add the respective translation files.
+
+### Editing Translations via Admin Panel
+Translations can be easily managed through the admin panel. After logging into your admin account, navigate to the translations section where you can view, edit, and add new translations for the supported languages. This makes it convenient to update translations without directly modifying the files.
+
+### Changing the Language
+To change the language in your application, a route has been defined in the `web.php` file. Users can switch between available languages by accessing this route. Here is an example of how you might set up this route:
+```Route::get('/set/language/{language}')```
+
+### Creating Language Files:
+
+- Navigate to the langs folder in your Laravel project.
+- Create a new folder for the desired language (e.g., es for Spanish).
+- Add the necessary translation files (e.g., messages.php, auth.php) inside this folder.
+
+
+### Managing Translations:
+
+- Log in to the admin panel.
+- Go to the translations section. 
+- Edit or add new translations for the languages you have added.

@@ -1,0 +1,19 @@
+---
+title: 'Admin'
+description: 'Learn how to manage your admin via Filament admin panel'
+icon: 'gear'
+---
+
+### Create an admin
+After installing the application, you can create a new admin user account using the following command:
+```php artisan make:admin```
+
+You will be prompted to enter the admin name, email, and password. Once the account is created, you can access the admin panel by visiting `/admin` and logging in with your credentials.
+
+### Allowed domains
+To restrict admin panel access to users with specific email domains, add the allowed domains to your .env file under the `SUPPORTED_DOMAINS` key, using a comma-separated format.
+
+```SUPPORTED_DOMAINS=example.com,anotherdomain.com```
+
+### User Model 
+If you need to apply specific conditions for admin accounts, modify the `canAccessPanel` method in the `User` model accordingly. This method determines whether a user has access to the admin panel.

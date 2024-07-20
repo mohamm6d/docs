@@ -1,0 +1,33 @@
+---
+title: 'Subscriptions'
+description: 'Learn how to setup user membership for your app'
+icon: 'gear'
+---
+
+Xeepp integrates subscription management using Laravel Cashier, providing a robust solution for handling subscriptions and billing within your application. This guide will help you understand how subscription management is implemented in your Laravel Vue starter kit.
+
+### Overview
+Laravel Cashier offers a fluent interface for managing subscription billing with Stripe and Paddle. With this integration, you can manage user subscriptions, handle recurring payments, and access billing features with ease.
+
+### User model
+Ensure that your User model uses the Billable trait provided by Cashier:
+```php
+namespace App\Models;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Cashier\Billable;
+
+class User extends Authenticatable
+{
+    use Billable;
+
+    // Other user model methods and properties
+}
+```
+
+### Webhook
+Laravel Cashier handles Stripe webhooks with a built-in controller:
+```
+Route::post('webhook/stripe', [\Laravel\Cashier\Http\Controllers\WebhookController::class, 'handleStripeWebhook']);
+```
+For Paddle, configure the endpoint similarly.

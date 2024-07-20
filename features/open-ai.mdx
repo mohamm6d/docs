@@ -1,0 +1,40 @@
+---
+title: 'Blog'
+description: 'Learn how to setup full-featured blog for your app'
+icon: 'gear'
+---
+
+Our starter kit includes an OpenAIService that allows seamless integration with OpenAI's API throughout the application. To start using the service, you need to set the required environment variables.
+
+### Setting Up OpenAI Service
+#### Set Environment Variables:
+- Add your OpenAI API key to the .env file:
+```
+OPENAI_API_KEY=your-openai-api-key-here
+``` 
+#### Using OpenAIService:
+The `OpenAIService` can be used anywhere in your application to interact with OpenAI's API. Here is a basic example of how to use it within a controller:
+```
+namespace App\Http\Controllers;
+
+use App\Services\OpenAIService;
+use Illuminate\Http\Request;
+
+class ExampleController extends Controller
+{
+    protected $openAIService;
+
+    public function __construct(OpenAIService $openAIService)
+    {
+        $this->openAIService = $openAIService;
+    }
+
+    public function generateText(Request $request)
+    {
+        $prompt = $request->input('prompt');
+        $response = $this->openAIService->generateText($prompt);
+
+        return response()->json(['response' => $response]);
+    }
+}
+```

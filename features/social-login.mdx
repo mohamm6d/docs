@@ -1,0 +1,28 @@
+---
+title: 'Blog'
+description: 'Learn how to setup full-featured blog for your app'
+icon: 'gear'
+---
+Xeepp leverages Spatie Social Login to simplify the integration of various social login services into your application. To enable social logins for different platforms, follow these steps:
+
+### Configuration
+- Add Social Networks:
+
+To support a new social network, add its configuration to the services.php file. This typically involves adding API credentials specific to each social provider.
+
+- Set Environment Variables:
+
+Update your `.env` file with the necessary environment variables for each social network you want to integrate. These variables include client IDs, client secrets, and redirect URLs.
+- Routes
+The social login functionality is managed through the following routes in your web.php:
+
+```
+Route::get('auth/{network}', [\App\Http\Controllers\Auth\AuthSocialController::class, 'redirect']);
+Route::get('auth/{network}/callback', [\App\Http\Controllers\Auth\AuthSocialController::class, 'callback']);
+```
+- auth/{network}: Initiates the authentication process by redirecting users to the social network's login page.
+- auth/{network}/callback: Handles the callback from the social network after user authentication, completing the login process.
+
+### Example Usage
+To add support for Google login, configure Google-specific settings in services.php, set the corresponding .env variables, and use the routes provided.
+For detailed information on configuring each social network, refer to the Spatie Social Login documentation and the respective social provider’s API documentation.

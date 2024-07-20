@@ -54,10 +54,28 @@
       ]
     },
     {
+      "group": "Setup",
+      "pages": [
+        "setup/backup",
+        "setup/database",
+        "setup/payments",
+        "setup/routing",
+        "setup/users"
+      ]
+    },
+    {
       "group": "Features",
       "pages": [
-        "features/routing",
-        "features/payments"
+        "features/admin",
+        "features/payments",
+        "features/settings",
+        "features/products",
+        "features/blog",
+        "features/magic-links",
+        "features/open-ai",
+        "features/role-permissions",
+        "features/social-login",
+        "features/subscriptions"
       ]
     },
     {

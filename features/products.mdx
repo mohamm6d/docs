@@ -1,0 +1,28 @@
+---
+title: 'Products'
+description: 'Learn how to setup products to sell for your app'
+icon: 'gear'
+---
+
+Our starter kit is packed with features to help you manage products and orders efficiently. Below is a comprehensive guide to utilizing these features within your application.
+
+## Product and Order Management
+### Admin Panel
+
+- Create Products: Admins can create new products directly from the admin panel. This intuitive interface makes product management straightforward and efficient.
+- Manage Products and Orders: The admin portal provides complete control over product and order management. Admins can view, edit, and delete products and orders as needed.
+- Sharing Product Links
+Order Link: Admins can generate a link to order a product by using the following route:
+```
+Route::get('/order/{productId}')```
+This link can be shared anywhere to direct users to order a specific product.
+
+## Payment Integration
+### Supported Payment Providers
+- Stripe: Our starter kit integrates with Stripe for secure and reliable payment processing.
+- LemonSqueezy (In Progress): Integration with LemonSqueezy is in progress to provide additional payment options.
+
+
+## Frontend Components
+### Vue Components
+- Product Widget: We provide two Vue components named Product, which are designed to render product widgets. These components accept a product as a prop to display the product details dynamically.

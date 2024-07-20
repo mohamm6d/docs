@@ -1,0 +1,62 @@
+---
+title: 'Blog'
+description: 'Learn how to setup full-featured blog for your app'
+icon: 'gear'
+---
+
+Our starter kit includes integration with the `Spatie Laravel Permission` package. This package allows you to manage roles and permissions within your application, and it can be fully managed from the admin panel.
+
+## Managing Roles and Permissions
+### Admin Panel
+- Roles Management: Admins can create and manage roles within the admin panel. This includes adding new roles, updating existing roles, and deleting roles that are no longer needed.
+
+- Permissions Management: Admins can define permissions and assign them to roles. This allows for fine-grained control over what actions users can perform within the application.
+
+- Assigning Roles to Users: Admins can assign roles to users, granting them the appropriate permissions based on their role.
+Usage in Your Application
+
+- Checking Permissions
+You can check for roles and permissions in your application using the provided methods. For example:
+
+```
+if ($user->hasRole('admin')) {
+    // The user is an admin
+}
+
+if ($user->can('edit articles')) {
+    // The user can edit articles
+}```
+
+### Middleware
+You can protect routes using role or permission middleware:
+
+```Route::group(['middleware' => ['role:admin']], function () {
+    Route::get('/admin', 'AdminController@index');
+});
+
+Route::group(['middleware' => ['permission:edit articles']], function () {
+    Route::get('/articles/{id}/edit', 'ArticleController@edit');
+});```
+
+### Blade Directives
+The package provides convenient Blade directives for checking roles and permissions in your views:
+
+```@role('admin')
+    <p>This is visible to users with the admin role.</p>
+@endrole
+
+@can('edit articles')
+    <p>This is visible to users with the edit articles permission.</p>
+@endcan```
+
+## Example Use Cases
+Admin-Only Access: Restrict access to the admin panel so that only users with the admin role can access it.
+Content Management: Grant users with the editor role the ability to create and edit articles, while users with the viewer role can only view articles.
+
+By integrating the Spatie Laravel Permission package, you can easily manage roles and permissions within your application, ensuring that users have the appropriate access based on their roles. The admin panel provides a user-friendly interface for managing these roles and permissions, making it easy to maintain control over user access and capabilities.
+
+
+
+
+
+
