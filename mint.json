@@ -2,8 +2,8 @@
   "$schema": "https://xeepp.com/schema.json",
   "name": "Xeepp Starter Kit",
   "logo": {
-    "dark": "/logo/logo.png",
-    "light": "/logo/logo.png"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
