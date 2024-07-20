@@ -1,5 +1,49 @@
 ---
 title: 'Blog'
 description: 'Learn how to setup full-featured blog for your app'
-icon: 'gear'
+icon: 'table'
 ---
+Xeepp utilizes a robust backup package to ensure the safety of your data and files. The application features an administrative panel that facilitates both real-time backup generation and comprehensive management of backup files.
+
+You can configure the backup settings in the configuration file to include specific files or focus solely on database backups. Note that including additional files in the backup may impact storage usage.
+
+Additionally, you have the option to set up notifications that will send email alerts for each backup operation.
+
+### Set Up Backup Destinations:
+
+Open the `config/backup.php` file and configure your backup destinations. For example, you can configure backups to be stored locally, on S3, or on other cloud storage services.
+```
+'disks' => [
+    'local' => [
+        'driver' => 'local',
+        'root' => storage_path('app/backups'),
+    ],
+    's3' => [
+        'driver' => 's3',
+        'key' => env('AWS_KEY'),
+        'secret' => env('AWS_SECRET'),
+        'region' => env('AWS_REGION'),
+        'bucket' => env('AWS_BUCKET'),
+    ],
+],
+```
+Ensure that your .env file includes the necessary environment variables for your chosen storage solution.
+
+### Schedule Backups:
+
+Backups are typically scheduled using Laravel's task scheduling. Open your `app/Console/Kernel.php` file and add a schedule for backups in the schedule method:
+
+```
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('backup:run')->daily();
+}
+```
+This example schedules backups to run daily. Adjust the schedule according to your needs.
+
+### Admin Panel Integration
+The admin panel provides an interface to view and manage backups. Here's how to access and use it:
+
+#### Access the Backup Management Section:
+Navigate to the admin panel of your application. Look for the "Backups" section in the sidebar or menu.
+

@@ -1,0 +1,67 @@
+---
+title: Local Setup
+description: 'Xeepp is all-in-one laravel starter kit'
+icon: 'rocket'
+---
+This guide will walk you through the process of deploying your project to a live production environment.
+
+### Prepare Your GitHub Repository
+Create a GitHub Repository:
+
+Set up a new repository on GitHub for your project and push your latest changes to this repository.
+
+### Select a Hosting Provider
+Choose a Hosting Solution:
+
+Select a hosting provider for your application. DigitalOcean, Hetzner or even small instances of AWS is a recommended option due to its affordability and scalability features, but feel free to choose a provider that suits your needs.
+
+### Configure Your Environment
+Update Production Environment Variables:
+
+Edit your `.env` file to include production credentials for services such as Stripe or LemonSqueezy. Ensure that you use the appropriate API keys and secrets for the live environment. Set the `APP_DEBUG=false` and also `APP_ENV=production`
+
+### Set Up Payment Webhooks:
+
+Configure payment webhooks for Stripe or LemonSqueezy to ensure that your payment processing is correctly set up in production.
+
+### Disable Test Mode:
+
+Ensure that "Test Mode" is turned off for Stripe or LemonSqueezy to enable real transactions.
+
+### Deploy Your Application
+- Install PHP Dependencies:
+
+Run the following command to install all necessary PHP dependencies:
+```
+composer install```
+- Generate Application Key:
+
+Generate a new application key if you haven't done so already:
+```
+php artisan key:generate```
+- Apply Database Migrations:
+
+Update your database schema with the latest migrations:
+
+```php artisan migrate```
+- Create Admin User:
+
+Create an administrative user account for managing the application:
+```
+php artisan make:admin```
+Install Node.js Dependencies:
+
+- Install the required Node.js packages:
+
+```npm install```
+- Build Frontend Assets:
+
+Compile your frontend assets for production:
+```
+npm run build```
+
+### Final Steps
+Once the above steps are completed, your application should be ready for production.
+
+## Need Assistance?
+If you have any questions or require further assistance with deployment, please do not hesitate to reach out. I am available to support you with the deployment process at no additional cost.

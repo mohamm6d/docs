@@ -1,16 +1,39 @@
 ---
 title: 'Payments'
 description: 'Learn how to setup payment provides for your app'
-icon: 'gear'
+icon: 'credit-card'
 ---
 
-You can simply load any settings that you can set in admin via following codes
+To enable Stripe payments in your Laravel application using Cashier, follow these steps to set up your Stripe account and configure the necessary environment variables in your application.
 
-## Admin
-Simply head to `admin` and select `Laravel Setting` from the side bar. There you can set settings for your application
+### Set Up Your Stripe Account
+- Create a Stripe Account:
 
-## Load settings
-By calling this helper, settings are loaded into your application. Some of these settings are created on setting up the application like `ui` settings.
+If you don't already have a Stripe account, sign up at Stripe's website. Follow the on-screen instructions to complete the registration process.
+
+- Access Your Stripe Dashboard:
+
+Once your account is created, log in to the Stripe Dashboard.
+
+- Obtain API Keys:
+
+Navigate to the Developers section on the left sidebar.
+Click on API keys.
+You will see two keys: Publishable key and Secret key. You will need both of these keys for your application.
+
+
+### Configure Environment Variables in Laravel
+- Open Your .env File:
+
+In the root directory of your Laravel project, locate and open the .env file. If it doesn’t exist, you can create one by copying .env.example:
+
 ```
-setting('group.name')
+cp .env.example .env```
+- Set Stripe Environment Variables:
+
+Add or update the following lines in your .env file with the API keys you obtained from Stripe:
 ```
+STRIPE_KEY=your-stripe-publishable-key
+STRIPE_SECRET=your-stripe-secret-key
+```
+Replace your-stripe-publishable-key and your-stripe-secret-key with the actual values from your Stripe dashboard.

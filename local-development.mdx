@@ -1,0 +1,48 @@
+---
+title: Local Setup
+description: 'Xeepp is all-in-one laravel starter kit'
+icon: 'laptop'
+---
+
+Welcome to the setup guide for the Xeepp Laravel Starter Kit! This document will walk you through the steps to fork the repository from GitHub, clone it to your local machine, and set up your Laravel application.
+
+
+### Install Dependencies
+Install PHP Dependencies:
+
+Ensure you have Composer installed. Run the following command to install PHP dependencies:
+```
+composer install```
+Install JavaScript Dependencies:
+
+Make sure you have Node.js and npm installed. Run the following command to install JavaScript dependencies and Vite starts the server:
+
+```yarn add```
+
+### Set Up Environment Configuration
+Copy the Example Environment File:
+
+Create a new environment file by copying the example file provided:
+```cp .env.example .env```
+
+- Generate Application Key:
+
+Generate a new application key for your Laravel application:
+```
+php artisan key:generate```
+
+- Configure Your Environment Variables:
+
+Open the .env file in a text editor and update the necessary environment variables, such as database configuration, application URL, and any other required settings. Ensure the DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD values are correctly set for your environment.
+
+### Step 4: Launch the Application
+To run your application and make it accessible at `http://localhost:8000`, execute the following commands in separate terminal windows:
+
+- Start the PHP Development Server:
+```
+php artisan serve```
+
+Start the Vite Development Server:
+```
+yarn run dev```
+With both servers running, you can access your application by navigating to http://localhost:8000 in your web browser.
