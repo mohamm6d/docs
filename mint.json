@@ -2,8 +2,8 @@
   "$schema": "https://xeepp.com/schema.json",
   "name": "Xeepp Starter Kit",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/light.svg",
+    "light": "/logo/dark.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -56,11 +56,11 @@
     {
       "group": "Setup",
       "pages": [
-        "setup/backup",
         "setup/database",
         "setup/payments",
         "setup/routing",
-        "setup/users"
+        "setup/users",
+        "setup/backup"
       ]
     },
     {
