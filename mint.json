@@ -7,9 +7,9 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#000000",
+    "light": "#f9f9f9",
+    "dark": "#000000",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -22,8 +22,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.xeepp.com"
+    "name": "Get Xeepp",
+    "url": "https://www.xeepp.com"
   },
   "tabs": [
     {
@@ -60,6 +60,7 @@
         "setup/payments",
         "setup/routing",
         "setup/users",
+        "setup/global-config",
         "setup/backup"
       ]
     },
@@ -74,6 +75,7 @@
         "features/magic-links",
         "features/open-ai",
         "features/role-permissions",
+        "features/sentry",
         "features/social-login",
         "features/subscriptions"
       ]
