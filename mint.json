@@ -48,6 +48,7 @@
       "group": "Get Started",
       "pages": [
         "introduction",
+        "setup",
         "quickstart",
         "Local-setup",
         "deploy-production"

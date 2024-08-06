@@ -1,0 +1,76 @@
+---
+title: Installation Guide
+description: Step-by-step guide to install the Xeepp Laravel boilerplate.
+---
+
+# Installation Guide
+
+Welcome to the installation guide for Xeepp, a Laravel boilerplate. This guide will take you through all the necessary steps to get Xeepp up and running on your Linux server.
+
+## Prerequisites
+
+Before you start, make sure you have the following installed on your server:
+
+- PHP (>= 8.1)
+- Composer
+- MySQL
+- Node.js and npm
+
+## Installation Steps
+
+Follow these steps to install Xeepp:
+
+### Step 1: Clone the Repository
+
+First, clone the Xeepp repository to your local machine:
+
+```bash
+git clone https://github.com/your-repo/xeepp.git
+cd xeepp
+```
+
+### Step 2: Run the Installation Script
+To simplify the installation process, we've provided a bash script that automates the setup. Create a new file named install_xeepp.sh and add the following script
+
+Make sure the script has executable permissions. You can set it by running:
+
+```
+chmod +x install_xeepp.sh
+Then execute the script:```
+
+```
+./install_xeepp.sh```
+
+## Manual Installation Steps
+If you prefer to install Xeepp manually, follow these steps:
+
+### Step 1: Install Composer Dependencies
+```
+Copy code
+composer install```
+### Step 2: Configure Environment
+Copy the .env.example file to .env:
+
+```
+cp .env.example .env```
+Generate the application key:
+
+```
+php artisan key:generate```
+### Step 3: Set Up Database
+Update the .env file with your database credentials:
+
+```bash
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password```
+### Step 4: Install Node.js Dependencies
+
+```bash
+npm install
+npm run build```
+
+### Step 5: Run Migrations and Seed Database
+```bash
+php artisan migrate
+php artisan db:seed```
